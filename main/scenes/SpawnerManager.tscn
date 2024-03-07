@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cd1feexal8pwn"]
+
+[ext_resource type="Script" path="res://scenes/SpawnerManager.gd" id="1_3j147"]
+[ext_resource type="PackedScene" uid="uid://ceew284axwoyf" path="res://scenes/Spawner.tscn" id="2_ftv67"]
+[ext_resource type="Script" path="res://scenes/SpawnFrequencyTimer.gd" id="3_t5bh6"]
+
+[node name="SpawnerManager" type="Node2D"]
+position = Vector2(-40, 0)
+script = ExtResource("1_3j147")
+metadata/_edit_group_ = true
+
+[node name="SpawnerStack" type="Node2D" parent="."]
+
+[node name="Spawner1" parent="SpawnerStack" instance=ExtResource("2_ftv67")]
+position = Vector2(448, 0)
+
+[node name="Spawner2" parent="SpawnerStack" instance=ExtResource("2_ftv67")]
+position = Vector2(320, 0)
+
+[node name="Spawner3" parent="SpawnerStack" instance=ExtResource("2_ftv67")]
+position = Vector2(192, 0)
+
+[node name="Spawner4" parent="SpawnerStack" instance=ExtResource("2_ftv67")]
+position = Vector2(64, 0)
+
+[node name="SpawnFrequencyTimer" type="Timer" parent="."]
+script = ExtResource("3_t5bh6")
+
+[connection signal="timeout" from="SpawnFrequencyTimer" to="." method="_on_spawn_frequency_timer_timeout"]
