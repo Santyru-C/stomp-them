@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://co7ctsq3d1cum"]
+
+[ext_resource type="Texture2D" uid="uid://p4jcobcxlrhb" path="res://icon.svg" id="1_d5ayv"]
+[ext_resource type="Script" path="res://scenes/StompZone.gd" id="1_vyxyv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26c04"]
+size = Vector2(32, 32)
+
+[node name="StompZone" type="Area2D"]
+position = Vector2(128, 64)
+script = ExtResource("1_vyxyv")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_26c04")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-3.8147e-06, 0)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_d5ayv")
