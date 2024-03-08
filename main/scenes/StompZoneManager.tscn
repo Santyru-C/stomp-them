@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://q6g6mqtg8mdt"]
+
+[ext_resource type="Script" path="res://scenes/StompZoneManager.gd" id="1_8juvr"]
+[ext_resource type="PackedScene" uid="uid://co7ctsq3d1cum" path="res://scenes/StompZone.tscn" id="1_xbae6"]
+
+[node name="StompZoneManager" type="Node2D"]
+position = Vector2(104, 256)
+script = ExtResource("1_8juvr")
+metadata/_edit_group_ = true
+
+[node name="StompZoneStack" type="Node2D" parent="."]
+
+[node name="StompZone1" parent="StompZoneStack" instance=ExtResource("1_xbae6")]
+position = Vector2(64, 0)
+
+[node name="StompZone2" parent="StompZoneStack" instance=ExtResource("1_xbae6")]
+position = Vector2(128, 0)
+
+[node name="StompZone3" parent="StompZoneStack" instance=ExtResource("1_xbae6")]
+position = Vector2(192, 0)
+
+[node name="StompZone4" parent="StompZoneStack" instance=ExtResource("1_xbae6")]
+position = Vector2(256, 0)
